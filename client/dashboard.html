@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Expense Tracker Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="container">
+        <button
+          id="logout-btn"
+          class="btn btn-primary btn-sm"
+          style="float: right"
+        >
+          Logout
+        </button>
+
+        <!-- rest of the code -->
+      </div>
+
+      <h1>Expense Tracker Dashboard</h1>
+      <hr />
+      <h2>Add Expense</h2>
+      <form id="add-expense-form">
+        <div class="form-group">
+          <label for="amount">Amount</label>
+          <input
+            type="number"
+            class="form-control"
+            id="amount"
+            name="amount"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input
+            type="text"
+            class="form-control"
+            id="description"
+            name="description"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input
+            type="date"
+            class="form-control"
+            id="date"
+            name="date"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="category">Category</label>
+          <input
+            type="text"
+            class="form-control"
+            id="category"
+            name="category"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Add Expense</button>
+      </form>
+      <hr />
+      <button class="btn btn-primary btn-sm" id="rzp-button1">
+        Buy permium
+      </button>
+      <h2 id="permiumUser"></h2>
+      <hr />
+      <h2>Expenses</h2>
+      <br />
+      <hr />
+      <h2>Leaderboard</h2>
+      <button type="button" class="btn btn-primary" id="leaderboard-btn">
+        View Leaderboard
+      </button>
+      <div id="leaderboard" class="d-none">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">User Name</th>
+              <th scope="col">Total Expenses</th>
+            </tr>
+          </thead>
+          <tbody id="totalExpense"></tbody>
+        </table>
+      </div>
+      <hr />
+      <br />
+
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Amount</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Category</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody id="expenses-table-body"></tbody>
+      </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>
